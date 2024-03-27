@@ -16,7 +16,7 @@ func resolveDependencies() -> [Package.Dependency] {
 }
 
 func resolveTargets() -> [Target] {
-    let baseTarget = Target.target(name: "SwiftyUserDefaults", dependencies: [], path: "Sources")
+    let baseTarget = Target.target(name: "SwiftyUserDefaults", dependencies: [], path: "Sources", resources: [.process("PrivacyInfo.xcprivacy")])
     let testTarget = Target.testTarget(name: "SwiftyUserDefaultsTests", dependencies: ["SwiftyUserDefaults", "Quick", "Nimble"])
 
     return shouldTest ? [baseTarget, testTarget] : [baseTarget]

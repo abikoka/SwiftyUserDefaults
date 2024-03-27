@@ -22,4 +22,6 @@ Pod::Spec.new do |s|
   s.cocoapods_version = '>= 1.4.0'  
 
   s.source_files = 'Sources/*.swift'
+  s.resource_bundles = {'SwiftyUserDefaults' => ['Sources/PrivacyInfo.xcprivacy']}
+#  s.resources = ['Sources/PrivacyInfo.xcprivacy']
 end
